@@ -38,8 +38,31 @@ class DatabaseSeeder extends Seeder
                 'email' => 'redac@redac.com',
                 'role_id' => 3,
                 'password' => bcrypt('laravel')
+            ],
+            [
+                'name' => 'Membre',
+                'email' => 'member@member.com',
+                'role_id' => 4,
+                'password' => bcrypt('laravel')
             ]
+        ]);
 
+        DB::table('articles')->insert([
+            [
+                'title'=>'aaaaaaaaaaaaaaaaaaa',
+                'text'=>'aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa',
+                'user_id'=>1,
+            ],
+            [
+                'title'=>'bbbbbbbbbbbbbbbbbbbb',
+                'text'=>'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
+                'user_id'=>2,
+            ],
+            [
+                'title'=>'ccccccccccccccccccc',
+                'text'=>'ccccccccccccccccccc ccccccccccccccccccc ccccccccccccccccccc ccccccccccccccccccc ccccccccccccccccccc ccccccccccccccccccc ',
+                'user_id'=>3,
+            ],
         ]);
 
         

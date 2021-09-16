@@ -13,6 +13,15 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->only('index');
+    }
+    public function index()
+    {
+        $users = User::all();
+        return view('pages.users',compact('users'));
+    }
     /**
      * Display the registration view.
      *
